@@ -2,9 +2,14 @@
 var app = express();
 app.set('view engine','ejs');*/
 
-var app = require('./config/express')();
-//var  produtosRouter = require('./app/routes/produtos')(app);
+require('dotenv').config(); //load env variables setted in .env file
 
-app.listen(process.env.PORT,function(){
+var app = require('./config/express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+app.set('io',io);
+
+http.listen(process.env.PORT,function(){
     console.log("servidor rodando loucamente");
 });

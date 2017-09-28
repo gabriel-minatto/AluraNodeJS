@@ -4,16 +4,23 @@
   "description": "site da casa do codigo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "author": "Gabriel Minatto",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.15.5",
     "express-load": "^1.1.16",
     "express-validator": "^4.2.1",
-    "mysql": "^2.14.1"
+    "mysql": "^2.14.1",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.3",
+    "supertest": "^3.0.0"
   }
 }
